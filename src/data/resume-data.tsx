@@ -10,7 +10,7 @@ export const RESUME_DATA = {
   summary: "Originally from Terceira Island in the Azores, Portugal. I'm a simple Software Engineer driven by a complex desire to continuously learn, grow, and develop meaningful, impactful software.",
   avatarUrl: "https://lh3.googleusercontent.com/a/ACg8ocKmo3cjnPqsAkc1NWeTTsogHSxtuJT-5keOv0Us9oyRKQ=s576-c-no",
   contact: {
-    email: "gustavoaaguiar2001@gmail.com",
+    email: "me@gustavoaaguiar.com",
     tel: "+351961883217",
     social: [
       {
