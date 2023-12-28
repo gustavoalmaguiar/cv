@@ -7,7 +7,7 @@ export const RESUME_DATA = {
   location: "Lisbon, Portugal",
   locationLink: "https://www.google.com/maps/place/Lisbon",
   about: "Software Engineer",
-  summary: " Originally from the Azores Islands in Portugal, I consider myself a simple Software Engineer driven by the complex desire to constantly learn and improve, and to create meaningful and impactful software.",
+  summary: "Originally from Terceira Island in the Azores, Portugal. I'm a simple Software Engineer driven by a complex desire to continuously learn, grow, and develop meaningful, impactful software.",
   avatarUrl: "https://lh3.googleusercontent.com/a/ACg8ocKmo3cjnPqsAkc1NWeTTsogHSxtuJT-5keOv0Us9oyRKQ=s576-c-no",
   contact: {
     email: "gustavoaaguiar2001@gmail.com",
