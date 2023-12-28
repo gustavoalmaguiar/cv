@@ -132,7 +132,11 @@ export default function Page() {
                   </h4>
                 </CardHeader>
                 <CardContent className="mt-2 text-xs">
-                  {work.description}
+                  <ul className="list-disc pl-5">
+                    {work.description.map((point, index) => (
+                      <li key={index}>{point}</li>
+                    ))}
+                  </ul>
                 </CardContent>
               </Card>
             );
@@ -146,7 +150,9 @@ export default function Page() {
                 <CardHeader>
                   <div className="flex items-center justify-between gap-x-2 text-base">
                     <h3 className="font-semibold leading-none">
-                      {education.school}
+                      <a className="hover:underline" href={education.link}>
+                        {education.school}
+                      </a>
                     </h3>
                     <div className="text-sm tabular-nums text-gray-500">
                       {education.start} - {education.end}
@@ -154,6 +160,10 @@ export default function Page() {
                   </div>
                 </CardHeader>
                 <CardContent className="mt-2">{education.degree}</CardContent>
+                <CardContent className="mt-2">
+                  <span className="font-semibold">GPA: </span>
+                  {education.gpa}
+                </CardContent>
               </Card>
             );
           })}
@@ -187,10 +197,6 @@ export default function Page() {
 
       <CommandMenu
         links={[
-          {
-            url: RESUME_DATA.personalWebsiteUrl,
-            title: "Personal Website",
-          },
           ...RESUME_DATA.contact.social.map((socialMediaLink) => ({
             url: socialMediaLink.url,
             title: socialMediaLink.name,
