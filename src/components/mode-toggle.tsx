@@ -1,9 +1,12 @@
 "use client";
 
-import React from "react";
+import * as React from "react";
+import { MoonIcon, SunIcon } from "@radix-ui/react-icons";
 import { useTheme } from "next-themes";
 
-export const ModeToggle = ({ children }: { children: React.ReactNode }) => {
+import { Button } from "@/components/ui/button";
+
+export function ModeToggle() {
   const { theme, setTheme } = useTheme();
 
   const toggleTheme = () => {
@@ -11,8 +14,13 @@ export const ModeToggle = ({ children }: { children: React.ReactNode }) => {
   };
 
   return (
-    <div onClick={toggleTheme} className="cursor-pointer transition-opacity duration-500 ease-in-out hover:opacity-70">
-      {children}
-    </div>
-  );
-};
+    <Button className="h-8 w-8" variant="outline" size="icon" onClick={toggleTheme}>
+      {theme === "dark" ? (
+        <SunIcon />
+      ) : (
+        <MoonIcon />
+      )}
+      <span className="sr-only">Toggle theme</span>
+    </Button>
+  )
+}

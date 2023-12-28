@@ -36,6 +36,7 @@ export default function Page() {
               </a>
             </p>
             <div className="flex gap-x-1 pt-1 font-mono text-sm text-muted-foreground print:hidden">
+              <ModeToggle />
               {RESUME_DATA.contact.email ? (
                 <Button
                   className="h-8 w-8"
@@ -87,12 +88,10 @@ export default function Page() {
               ) : null}
             </div>
           </div>
-          <ModeToggle>
-            <Avatar className="h-28 w-28">
-              <AvatarImage alt={RESUME_DATA.name} src={RESUME_DATA.avatarUrl} />
-              <AvatarFallback>{RESUME_DATA.initials}</AvatarFallback>
-            </Avatar>
-          </ModeToggle>
+          <Avatar className="h-28 w-28">
+            <AvatarImage alt={RESUME_DATA.name} src={RESUME_DATA.avatarUrl} />
+            <AvatarFallback>{RESUME_DATA.initials}</AvatarFallback>
+          </Avatar>
         </div>
         <Section>
           <h2 className="text-xl font-bold">About</h2>
