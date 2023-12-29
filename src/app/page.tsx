@@ -171,9 +171,13 @@ export default function Page() {
                     <div className="mb-2 flex-grow text-sm md:mb-0">
                       {education.degree}
                     </div>
-                    <div className="rounded-md border border-primary-foreground p-2 transition duration-150 ease-in-out hover:bg-primary-foreground md:rounded-none md:border-transparent">
+                    <Badge
+                      variant="secondary"
+                      className="p-2 align-middle text-xs"
+                      key={education.certificateUrl}
+                    >
                       <a
-                        className="inline-flex gap-x-1.5 align-baseline leading-none"
+                        className="inline-flex items-center gap-x-1.5 leading-none"
                         href={education.certificateUrl}
                         target="_blank"
                         rel="noreferrer noopener"
@@ -181,7 +185,7 @@ export default function Page() {
                         <GlobeIcon className="h-3 w-3" />
                         Certificate
                       </a>
-                    </div>
+                    </Badge>
                   </div>
                 </CardContent>
               </Card>
