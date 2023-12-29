@@ -14,13 +14,14 @@ export function ModeToggle() {
   };
 
   return (
-    <Button className="h-8 w-8" variant="outline" size="icon" onClick={toggleTheme}>
-      {theme === "dark" ? (
-        <SunIcon />
-      ) : (
-        <MoonIcon />
-      )}
+    <Button
+      className="animate-glow h-8 w-8"
+      variant="outline"
+      size="icon"
+      onClick={toggleTheme}
+    >
+      {theme === "dark" ? <SunIcon /> : <MoonIcon />}
       <span className="sr-only">Toggle theme</span>
     </Button>
-  )
+  );
 }
