@@ -9,7 +9,6 @@ import { Button } from "@/components/ui/button";
 import { RESUME_DATA } from "@/data/resume-data";
 import { ProjectCard } from "@/components/project-card";
 import { ModeToggle } from "@/components/mode-toggle";
-import { PdfViewerModal } from "@/components/pdf-viewer-modal";
 
 export const metadata: Metadata = {
   title: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,
@@ -168,13 +167,21 @@ export default function Page() {
                   </div>
                 </CardHeader>
                 <CardContent className="mt-2">
-                  <div className="flex items-center">
-                    <div className="flex-grow text-sm">{education.degree}</div>
-                    <PdfViewerModal
-                      pdfUrl={education.certificateUrl}
-                      triggerButtonText="View Certificate"
-                      modalTitle="Certificate"
-                    />
+                  <div className="flex flex-col items-start md:flex-row md:items-center">
+                    <div className="mb-2 flex-grow text-sm md:mb-0">
+                      {education.degree}
+                    </div>
+                    <div className="rounded-md border border-primary-foreground p-2 transition duration-150 ease-in-out hover:bg-primary-foreground md:rounded-none md:border-transparent">
+                      <a
+                        className="inline-flex gap-x-1.5 align-baseline leading-none"
+                        href={education.certificateUrl}
+                        target="_blank"
+                        rel="noreferrer noopener"
+                      >
+                        <GlobeIcon className="h-3 w-3" />
+                        Certificate
+                      </a>
+                    </div>
                   </div>
                 </CardContent>
               </Card>

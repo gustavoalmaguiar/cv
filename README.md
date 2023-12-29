@@ -8,9 +8,7 @@ Built with Next.js and shadcn/ui, deployed on Vercel.
 
 - [ ] Make the CV data to be [JSON Resume](https://jsonresume.org) compatible.
 
-- [ ] Add an easter egg for dark mode.
-
-- [ ] Add the degree's certificate PDF as a modal.
+- [x] Add an easter egg for dark mode.
 
 # License
 
