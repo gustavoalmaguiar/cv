@@ -45,6 +45,7 @@ export const RESUME_DATA = {
       link: "https://muchconsulting.com",
       badges: ["Hybrid"],
       title: "Software Engineer",
+      location: "Lisbon, Portugal",
       logo: "",
       start: "2023",
       end: "Present",
@@ -58,8 +59,9 @@ export const RESUME_DATA = {
     {
       company: "Manta, an IBM Company",
       link: "https://manta.io",
-      badges: ["Hybrid"],
+      badges: ["Remote"],
       title: "Junior Software Engineer",
+      location: "Lisbon, Portugal",
       logo: "",
       start: "2022",
       end: "2023",
