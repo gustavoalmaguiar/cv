@@ -7,8 +7,10 @@ export const RESUME_DATA = {
   location: "Lisbon, Portugal",
   locationLink: "https://www.google.com/maps/place/Lisbon",
   about: "Software Engineer",
-  summary: "Originally from Terceira Island in the Azores, Portugal. I'm a simple Software Engineer driven by a complex desire to continuously learn, grow, and develop meaningful, impactful software.",
-  avatarUrl: "https://lh3.googleusercontent.com/a/ACg8ocKmo3cjnPqsAkc1NWeTTsogHSxtuJT-5keOv0Us9oyRKQ=s576-c-no",
+  summary:
+    "Originally from Terceira Island in the Azores, Portugal. I'm a simple Software Engineer driven by a complex desire to continuously learn, grow, and develop meaningful, impactful software.",
+  avatarUrl:
+    "https://lh3.googleusercontent.com/a/ACg8ocKmo3cjnPqsAkc1NWeTTsogHSxtuJT-5keOv0Us9oyRKQ=s576-c-no",
   contact: {
     email: "me@gustavoaaguiar.com",
     tel: "+351961883217",
@@ -30,9 +32,11 @@ export const RESUME_DATA = {
       school: "Instituto Superior Técnico",
       link: "https://tecnico.ulisboa.pt/en/",
       degree: "Bachelor of Engineering in Computer Science",
+      location: "Lisbon, Portugal",
       start: "2019",
       end: "2022",
       gpa: "17/20",
+      certificateUrl: "./id_blur_certificate.pdf",
     },
   ],
   work: [
@@ -41,7 +45,7 @@ export const RESUME_DATA = {
       link: "https://muchconsulting.com",
       badges: ["Hybrid"],
       title: "Software Engineer",
-      logo: "", 
+      logo: "",
       start: "2023",
       end: "Present",
       description: [
@@ -82,9 +86,18 @@ export const RESUME_DATA = {
   projects: [
     {
       title: "Quizzes Tutor",
-      techStack: ["Java", "Spring Boot", "Vue.js", "TypeScript", "Cypress", "Apache JMeter", "Spock Framework"],
-      description: "Implemented full-stack feature of Failed Answers applying Scrum method using Java with Spring Boot back-end and Vue.js with TypeScript front-end. Performed E2E testing with Cypress JavaScript framework, load testing with Apache JMeter, unit and integration testing with Maven on Spock framework using web services with RESTful API.",
-      logo: "", 
+      techStack: [
+        "Java",
+        "Spring Boot",
+        "Vue.js",
+        "TypeScript",
+        "Cypress",
+        "Apache JMeter",
+        "Spock Framework",
+      ],
+      description:
+        "Implemented full-stack feature of Failed Answers applying Scrum method using Java with Spring Boot back-end and Vue.js with TypeScript front-end. Performed E2E testing with Cypress JavaScript framework, load testing with Apache JMeter, unit and integration testing with Maven on Spock framework using web services with RESTful API.",
+      logo: "",
       link: {
         label: "github.com",
         href: "https://github.com/gustavo-aguiar01/ES2122",
@@ -93,8 +106,9 @@ export const RESUME_DATA = {
     {
       title: "Class System",
       techStack: ["Java", "gRPC"],
-      description: "Client-Server architecture local distributed system built in Java with multiple servers where clients invoke remote procedure calls using gRPC framework to manage class enrollments.",
-      logo: "", 
+      description:
+        "Client-Server architecture local distributed system built in Java with multiple servers where clients invoke remote procedure calls using gRPC framework to manage class enrollments.",
+      logo: "",
       link: {
         label: "github.com",
         href: "https://github.com/gustavo-aguiar01/SD2122",
@@ -103,8 +117,9 @@ export const RESUME_DATA = {
     {
       title: "Company Management",
       techStack: ["Java"],
-      description: "Management application built in Java for a distribution company, using multiple design patterns.",
-      logo: "", 
+      description:
+        "Management application built in Java for a distribution company, using multiple design patterns.",
+      logo: "",
       link: {
         label: "github.com",
         href: "https://github.com/gustavo-aguiar01/PO2021",
@@ -113,8 +128,9 @@ export const RESUME_DATA = {
     {
       title: "Numbrix Solver",
       techStack: ["Python"],
-      description: "AI program built in Python used to solve Numbrix puzzles (DFS, BFS, Greedy Search & RBFS searching algorithms).",
-      logo: "", 
+      description:
+        "AI program built in Python used to solve Numbrix puzzles (DFS, BFS, Greedy Search & RBFS searching algorithms).",
+      logo: "",
       link: {
         label: "github.com",
         href: "https://github.com/gustavo-aguiar01/IA2122",
@@ -123,8 +139,9 @@ export const RESUME_DATA = {
     {
       title: "L22 Compiler",
       techStack: ["C++"],
-      description: "Compiler built in C++ for a simple programming language L22.",
-      logo: "", 
+      description:
+        "Compiler built in C++ for a simple programming language L22.",
+      logo: "",
       link: {
         label: "github.com",
         href: "https://github.com/gustavo-aguiar01/Comp2122",
@@ -133,8 +150,9 @@ export const RESUME_DATA = {
     {
       title: "User-Level FS",
       techStack: ["C"],
-      description: "File system at the user level built in C that uses primary memory to save its contents and handles multi-threaded usage.",
-      logo: "", 
+      description:
+        "File system at the user level built in C that uses primary memory to save its contents and handles multi-threaded usage.",
+      logo: "",
       link: {
         label: "github.com",
         href: "https://github.com/gustavo-aguiar01/SO2021",
@@ -143,12 +161,13 @@ export const RESUME_DATA = {
     {
       title: "Messaging Forum",
       techStack: ["C"],
-      description: "Client-Server architecture used for a centralized messaging service via TCP and UDP built in C.",
+      description:
+        "Client-Server architecture used for a centralized messaging service via TCP and UDP built in C.",
       logo: "",
       link: {
         label: "github.com",
         href: "https://github.com/gustavo-aguiar01/RC2122",
       },
     },
-  ],  
+  ],
 } as const;

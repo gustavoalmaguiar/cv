@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { RESUME_DATA } from "@/data/resume-data";
 import { ProjectCard } from "@/components/project-card";
 import { ModeToggle } from "@/components/mode-toggle";
+import { PdfViewerModal } from "@/components/pdf-viewer-modal";
 
 export const metadata: Metadata = {
   title: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,
@@ -149,21 +150,31 @@ export default function Page() {
             return (
               <Card key={education.school}>
                 <CardHeader>
-                  <div className="flex items-center justify-between gap-x-2 text-base">
-                    <h3 className="font-semibold leading-none">
-                      <a className="hover:underline" href={education.link}>
-                        {education.school}
-                      </a>
-                    </h3>
+                  <div className="flex items-start justify-between">
+                    <div>
+                      <h3 className="text-base font-semibold leading-none">
+                        <a className="hover:underline" href={education.link}>
+                          {education.school}
+                        </a>
+                      </h3>
+                      <div className="text-sm text-gray-500">
+                        {education.location}
+                      </div>
+                    </div>
                     <div className="text-sm tabular-nums text-gray-500">
                       {education.start} - {education.end}
                     </div>
                   </div>
                 </CardHeader>
-                <CardContent className="mt-2">{education.degree}</CardContent>
                 <CardContent className="mt-2">
-                  <span className="font-semibold">GPA: </span>
-                  {education.gpa}
+                  <div className="flex items-center">
+                    <div className="flex-grow text-sm">{education.degree}</div>
+                    <PdfViewerModal
+                      pdfUrl={education.certificateUrl}
+                      triggerButtonText="View Certificate"
+                      modalTitle="Certificate"
+                    />
+                  </div>
                 </CardContent>
               </Card>
             );
