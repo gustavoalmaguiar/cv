@@ -115,7 +115,7 @@ export default function Page() {
                       {work.start} - {work.end}
                     </div>
                   </div>
-                  <div className="flex items-center justify-between gap-x-2 text-base">
+                  <div className="flex items-center justify-between gap-x-2 text-lg">
                     <div className="text-sm text-gray-500">{work.location}</div>
                     <span className="inline-flex gap-x-1">
                       {work.badges.map((badge) => (
@@ -129,11 +129,11 @@ export default function Page() {
                       ))}
                     </span>
                   </div>
-                  <h4 className="font-mono text-sm leading-none">
+                  <h4 className="font-mono text-base leading-none">
                     {work.title}
                   </h4>
                 </CardHeader>
-                <CardContent className="mt-2 text-xs">
+                <CardContent className="mt-2 text-sm">
                   <ul className="list-disc pl-5">
                     {work.description.map((point, index) => (
                       <li key={index}>{point}</li>
