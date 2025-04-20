@@ -6,9 +6,9 @@ export const RESUME_DATA = {
   initials: "GA",
   location: "Lisbon, Portugal",
   locationLink: "https://www.google.com/maps/place/Lisbon",
-  about: "Software Engineer",
+  about: "Senior Software Engineer",
   summary:
-    "Originally from Terceira Island in the Azores, Portugal. I'm a simple Software Engineer driven by a complex desire to continuously learn, grow, and develop meaningful, impactful software.",
+    "AI-oriented Software Engineer from the Azores, livin in Lisbon, passionate about continuous learning, optimizing engineering workflows (incl. AI tooling), and building practical software. Keen interest in personal projects and currently expanding skills in modern web development (React, Next.js).",
   avatarUrl:
     "https://lh3.googleusercontent.com/a/ACg8ocKmo3cjnPqsAkc1NWeTTsogHSxtuJT-5keOv0Us9oyRKQ=s576-c-no",
   contact: {
@@ -44,16 +44,17 @@ export const RESUME_DATA = {
       company: "much. Consulting",
       link: "https://muchconsulting.com",
       badges: ["Hybrid"],
-      title: "Software Engineer",
+      title: "Senior Software Engineer",
       location: "Lisbon, Portugal",
-      logo: "",
+      logo: "https://muchconsulting.com/web/image/website/1/logo/much.%20Consulting?unique=f298de0",
       start: "2023",
       end: "Present",
       description: [
-        "Enhanced e-commerce platforms by developing custom modules and integrating various APIs.",
-        "Enriched Odoo's core functionality through collaborative development.",
-        "Delivered tailored IT solutions that precisely met client requirements.",
-        "Mentored new team members, focusing on the Odoo framework.",
+        "Initiated AI-based workflows & internal workshops, boosting engineering productivity.",
+        "Promoted to Senior level in 1.5 years due to exceptional performance.",
+        "Refined engineering workflows, improving team efficiency and code quality standards.",
+        "Led complex Odoo ERP projects for key clients; mentored junior engineers.",
+        "Developed, customized, and delivered Odoo solutions, achieving top-tier deliverability rates.",
       ],
     },
     {
@@ -66,10 +67,8 @@ export const RESUME_DATA = {
       start: "2022",
       end: "2023",
       description: [
-        "Played a pivotal role in developing and refining MANTA’s automated lineage platform, focusing on advanced SQL script parsing and grammar construction using ANTLR.",
-        "Actively participated in the transformation of MANTA’s product into a cloud-based SaaS.",
-        "Specialized in parsing complex SQL dialects like Snowflake, Google Big Query, and Amazon Redshift, significantly improving data flow analysis and metadata extraction.",
-        "Advocated for and practiced writing clean, modular, and testable Java code, contributing to the maintainability and scalability of the product.",
+        "Developed complex SQL parsers (ANTLR) and entity resolution algorithms for core data lineage system.",
+        "Integrated advanced analytics features for predictive data movement insights.",
       ],
     },
   ],
@@ -77,13 +76,21 @@ export const RESUME_DATA = {
     "Java",
     "Python",
     "JavaScript",
-    "HTML",
-    "CSS",
+    "C++",
+    "C#",
     "C",
     "React",
+    "Next.js",
     "TypeScript",
+    "Vue.js",
+    "Spring Boot",
     "ANTLR",
     "SQL",
+    "Odoo",
+    "Cursor IDE",
+    "Docker",
+    "Kubernetes",
+    "AWS",
   ],
   projects: [
     {
@@ -98,7 +105,7 @@ export const RESUME_DATA = {
         "Spock Framework",
       ],
       description:
-        "Implemented full-stack feature of Failed Answers applying Scrum method using Java with Spring Boot back-end and Vue.js with TypeScript front-end. Performed E2E testing with Cypress JavaScript framework, load testing with Apache JMeter, unit and integration testing with Maven on Spock framework using web services with RESTful API.",
+        "Full-stack educational app with Java Spring Boot back-end and Vue.js/TS front-end. E2E testing with Cypress, load testing with JMeter.",
       logo: "",
       link: {
         label: "github.com",
@@ -109,7 +116,7 @@ export const RESUME_DATA = {
       title: "Class System",
       techStack: ["Java", "gRPC"],
       description:
-        "Client-Server architecture local distributed system built in Java with multiple servers where clients invoke remote procedure calls using gRPC framework to manage class enrollments.",
+        "Distributed class enrollment system built in Java with gRPC.",
       logo: "",
       link: {
         label: "github.com",
@@ -120,7 +127,7 @@ export const RESUME_DATA = {
       title: "Company Management",
       techStack: ["Java"],
       description:
-        "Management application built in Java for a distribution company, using multiple design patterns.",
+        "Java management app using design patterns.",
       logo: "",
       link: {
         label: "github.com",
