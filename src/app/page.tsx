@@ -1,6 +1,6 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { CommandMenu } from "@/components/command-menu";
 import { ContactModal } from "@/components/contact-modal";
+import { ThemeAvatar } from "@/components/theme-avatar";
 import { Metadata } from "next";
 import {
   MailIcon,
@@ -13,7 +13,6 @@ import {
   RocketIcon,
 } from "lucide-react";
 import { RESUME_DATA } from "@/data/resume-data";
-import { ModeToggle } from "@/components/mode-toggle";
 
 export const metadata: Metadata = {
   title: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,
@@ -39,25 +38,21 @@ const SKILL_LABELS: Record<string, string> = {
 export default function Page() {
   return (
     <main className="noise-overlay min-h-screen bg-background">
-      <div className="container mx-auto max-w-6xl px-4 py-8 md:px-8 md:py-16">
+      <div className="container mx-auto max-w-6xl px-4 py-6 sm:px-6 sm:py-10 md:px-8 md:py-16">
         {/* ===== BENTO GRID ===== */}
         <div className="bento-grid">
           {/* ===== HERO CARD (3x2) ===== */}
           <article
-            className="bento-card bento-hero col-span-3 row-span-2 flex flex-col justify-between animate-fade-in-up delay-0"
-            style={{ gridColumn: "span 3", gridRow: "span 2" }}
+            className="bento-card bento-hero col-span-1 md:col-span-2 lg:col-span-3 row-span-1 md:row-span-2 flex flex-col justify-between animate-fade-in-up delay-0"
           >
             <div className="relative z-10">
-              <div className="mb-6 flex items-start justify-between">
-                <div className="status-indicator font-mono text-xs uppercase tracking-wider text-muted-foreground">
-                  Available for opportunities
-                </div>
-                <div className="print:hidden">
-                  <ModeToggle />
+              <div className="mb-6">
+                <div className="maker-badge font-mono text-xs uppercase tracking-wider">
+                  <span className="maker-text">Open to building cool things</span>
                 </div>
               </div>
 
-              <h1 className="font-display text-6xl leading-none tracking-tight md:text-7xl lg:text-8xl">
+              <h1 className="font-display text-4xl leading-none tracking-tight sm:text-5xl md:text-6xl lg:text-8xl">
                 {RESUME_DATA.name.split(" ")[0]}
                 <br />
                 <span className="text-accent">
@@ -65,7 +60,7 @@ export default function Page() {
                 </span>
               </h1>
 
-              <p className="mt-4 text-xl font-medium text-muted-foreground md:text-2xl">
+              <p className="mt-4 text-lg font-medium text-muted-foreground sm:text-xl md:text-2xl">
                 {RESUME_DATA.about}
               </p>
 
@@ -88,15 +83,11 @@ export default function Page() {
             </div>
 
             <div className="relative z-10 mt-6 flex items-end justify-between">
-              <Avatar className="h-20 w-20 border-4 border-accent shadow-lg md:h-24 md:w-24">
-                <AvatarImage
-                  alt={RESUME_DATA.name}
-                  src={RESUME_DATA.avatarUrl}
-                />
-                <AvatarFallback className="bg-accent text-2xl font-display text-accent-foreground">
-                  {RESUME_DATA.initials}
-                </AvatarFallback>
-              </Avatar>
+              <ThemeAvatar
+                src={RESUME_DATA.avatarUrl}
+                alt={RESUME_DATA.name}
+                initials={RESUME_DATA.initials}
+              />
 
               <div className="font-mono text-xs uppercase tracking-wider text-muted-foreground">
                 Scroll to explore ↓
@@ -106,44 +97,45 @@ export default function Page() {
 
           {/* ===== CONTACT CARD (1x2) ===== */}
           <article
-            className="bento-card row-span-2 flex flex-col justify-between animate-fade-in-up delay-75"
-            style={{ gridRow: "span 2" }}
+            className="bento-card row-span-1 md:row-span-2 flex flex-col animate-fade-in-up delay-75"
           >
             <h2 className="font-mono text-xs uppercase tracking-wider text-muted-foreground">
-              Contact
+              Connect
             </h2>
 
-            <div className="flex flex-col gap-3 my-auto">
-              {RESUME_DATA.contact.email && (
-                <a
-                  href={`mailto:${RESUME_DATA.contact.email}`}
-                  className="icon-btn"
-                  aria-label="Email"
-                >
-                  <MailIcon className="h-5 w-5" />
-                </a>
-              )}
-              {RESUME_DATA.contact.tel && (
-                <a
-                  href={`tel:${RESUME_DATA.contact.tel}`}
-                  className="icon-btn"
-                  aria-label="Phone"
-                >
-                  <PhoneIcon className="h-5 w-5" />
-                </a>
-              )}
-              {RESUME_DATA.contact.social.map((social) => (
-                <a
-                  key={social.name}
-                  href={social.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="icon-btn"
-                  aria-label={social.name}
-                >
-                  <social.icon className="h-5 w-5" />
-                </a>
-              ))}
+            <div className="flex-1 flex items-center justify-center mt-4 md:mt-0">
+              <div className="flex flex-row flex-wrap justify-center gap-3 md:flex-col md:gap-4">
+                {RESUME_DATA.contact.email && (
+                  <a
+                    href={`mailto:${RESUME_DATA.contact.email}`}
+                    className="icon-btn"
+                    aria-label="Email"
+                  >
+                    <MailIcon className="h-5 w-5" />
+                  </a>
+                )}
+                {RESUME_DATA.contact.tel && (
+                  <a
+                    href={`tel:${RESUME_DATA.contact.tel}`}
+                    className="icon-btn"
+                    aria-label="Phone"
+                  >
+                    <PhoneIcon className="h-5 w-5" />
+                  </a>
+                )}
+                {RESUME_DATA.contact.social.map((social) => (
+                  <a
+                    key={social.name}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="icon-btn"
+                    aria-label={social.name}
+                  >
+                    <social.icon className="h-5 w-5" />
+                  </a>
+                ))}
+              </div>
             </div>
 
             {/* Print-only contact */}
@@ -156,10 +148,9 @@ export default function Page() {
           {/* ===== EXPERIENCE SECTION HEADER ===== */}
           <div
             className="col-span-full flex items-center gap-4 py-4 animate-fade-in-up delay-300"
-            style={{ gridColumn: "1 / -1" }}
           >
             <BriefcaseIcon className="h-6 w-6 text-accent" />
-            <h2 className="font-display text-3xl">Experience</h2>
+            <h2 className="font-display text-2xl sm:text-3xl">Experience</h2>
             <div className="h-px flex-1 bg-border" />
           </div>
 
@@ -170,7 +161,6 @@ export default function Page() {
               className="bento-card col-span-full animate-fade-in-up"
               style={{
                 animationDelay: `${375 + companyIndex * 75}ms`,
-                gridColumn: "1 / -1",
               }}
             >
               {/* Horizontal header with all metadata */}
@@ -192,7 +182,7 @@ export default function Page() {
                 <span className="rounded-full border border-border bg-secondary px-2.5 py-0.5 font-mono text-xs text-muted-foreground">
                   {company.badges[0]}
                 </span>
-                <span className="ml-auto font-mono text-xs text-muted-foreground">
+                <span className="w-full text-left font-mono text-xs text-muted-foreground sm:ml-auto sm:w-auto">
                   {company.start} — {company.end}
                 </span>
               </div>
@@ -226,8 +216,7 @@ export default function Page() {
 
           {/* ===== EDUCATION CARD ===== */}
           <article
-            className="bento-card row-span-2 animate-fade-in-up delay-525"
-            style={{ gridRow: "span 2" }}
+            className="bento-card row-span-1 md:row-span-2 animate-fade-in-up delay-525"
           >
             <div className="mb-4 flex items-center gap-2">
               <GraduationCapIcon className="h-5 w-5 text-accent" />
@@ -277,8 +266,7 @@ export default function Page() {
 
           {/* ===== SKILLS CARD ===== */}
           <article
-            className="bento-card col-span-2 row-span-2 lg:col-span-3 animate-fade-in-up delay-600"
-            style={{ gridColumn: "span 3", gridRow: "span 2" }}
+            className="bento-card col-span-1 md:col-span-2 lg:col-span-3 row-span-1 md:row-span-2 animate-fade-in-up delay-600"
           >
             <div className="mb-6 flex items-center gap-2">
               <CodeIcon className="h-5 w-5 text-accent" />
@@ -287,7 +275,7 @@ export default function Page() {
               </h2>
             </div>
 
-            <div className="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-5">
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
               {Object.entries(RESUME_DATA.skills).map(
                 ([category, skills], catIndex) => (
                   <div
@@ -325,10 +313,9 @@ export default function Page() {
           {/* ===== PROJECTS SECTION HEADER ===== */}
           <div
             className="col-span-full flex items-center gap-4 py-4 animate-fade-in-up delay-800 print-force-new-page"
-            style={{ gridColumn: "1 / -1" }}
           >
             <RocketIcon className="h-6 w-6 text-accent" />
-            <h2 className="font-display text-3xl">Projects</h2>
+            <h2 className="font-display text-2xl sm:text-3xl">Projects</h2>
             <div className="h-px flex-1 bg-border" />
           </div>
 
@@ -373,18 +360,17 @@ export default function Page() {
 
           {/* ===== FOOTER CARD ===== */}
           <article
-            className="bento-card bento-accent col-span-full flex items-center justify-between animate-fade-in-up delay-1000"
-            style={{ gridColumn: "1 / -1" }}
+            className="bento-card bento-cta col-span-full flex flex-col gap-4 text-center sm:flex-row sm:items-center sm:justify-between sm:text-left animate-fade-in-up delay-1000"
           >
-            <div>
-              <p className="font-display text-2xl">Let's build something together</p>
-              <p className="mt-1 text-sm opacity-70">
-                Open to new opportunities and collaborations
+            <div className="relative z-10">
+              <p className="font-display text-xl sm:text-2xl">Let's build something together</p>
+              <p className="mt-1 text-sm text-muted-foreground">
+                Always excited to collaborate on meaningful projects
               </p>
             </div>
             <ContactModal email={RESUME_DATA.contact.email}>
-              <button className="rounded-xl border-2 border-current bg-transparent px-6 py-3 font-semibold transition-all hover:bg-primary-foreground hover:text-primary">
-                Get in Touch
+              <button className="cta-button rounded-xl px-6 py-3 font-semibold">
+                <span>Say Hello</span>
               </button>
             </ContactModal>
           </article>
