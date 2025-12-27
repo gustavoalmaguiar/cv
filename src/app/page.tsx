@@ -202,7 +202,7 @@ export default function Page() {
                 {company.roles.map((role, roleIndex) => (
                   <div
                     key={role.title}
-                    className={`role-timeline ${roleIndex === 0 ? "role-current" : ""}`}
+                    className={`role-timeline ${companyIndex === 0 && roleIndex === 0 ? "role-current" : ""}`}
                   >
                     <div className="mb-2 flex items-baseline justify-between gap-4">
                       <h4 className="font-semibold">{role.title}</h4>
