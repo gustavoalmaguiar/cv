@@ -6,9 +6,9 @@ export const RESUME_DATA = {
   initials: "GA",
   location: "Lisbon, Portugal",
   locationLink: "https://www.google.com/maps/place/Lisbon",
-  about: "Senior Software Engineer",
+  about: "Engineering Manager",
   summary:
-    "AI-oriented Software Engineer from the Azores, livin in Lisbon, passionate about continuous learning, optimizing engineering workflows (incl. AI tooling), and building practical software. Keen interest in personal projects and currently expanding skills in modern web development (React, Next.js).",
+    "Engineering Manager from the Azores, based in Lisbon. Leading a team of 9 engineers while driving AI adoption across the organization. Passionate about building high-performing teams, optimizing workflows through AI tooling, and bridging technical and non-technical stakeholders.",
   avatarUrl:
     "https://lh3.googleusercontent.com/a/ACg8ocKmo3cjnPqsAkc1NWeTTsogHSxtuJT-5keOv0Us9oyRKQ=s576-c-no",
   contact: {
@@ -17,7 +17,7 @@ export const RESUME_DATA = {
     social: [
       {
         name: "GitHub",
-        url: "https://github.com/gustavo-aguiar01",
+        url: "https://github.com/gustavoalmaguiar",
         icon: GitHubIcon,
       },
       {
@@ -36,7 +36,7 @@ export const RESUME_DATA = {
       start: "2019",
       end: "2022",
       gpa: "17/20",
-      certificateUrl: "./id_blur_certificate.pdf",
+      certificateUrl: "/id_blur_certificate.pdf",
     },
   ],
   work: [
@@ -44,68 +44,87 @@ export const RESUME_DATA = {
       company: "much. Consulting",
       link: "https://muchconsulting.com",
       badges: ["Hybrid"],
-      title: "Senior Software Engineer",
       location: "Lisbon, Portugal",
       logo: "https://muchconsulting.com/web/image/website/1/logo/much.%20Consulting?unique=f298de0",
-      start: "2023",
+      start: "Oct 2023",
       end: "Present",
-      description: [
-        "Initiated AI-based workflows & internal workshops, boosting engineering productivity.",
-        "Promoted to Senior level in 1.5 years due to exceptional performance.",
-        "Refined engineering workflows, improving team efficiency and code quality standards.",
-        "Led complex Odoo ERP projects for key clients; mentored junior engineers.",
-        "Developed, customized, and delivered Odoo solutions, achieving top-tier deliverability rates.",
+      roles: [
+        {
+          title: "Engineering Manager",
+          start: "Aug 2025",
+          end: "Present",
+          description: [
+            "Lead a team of 9 engineers, overseeing project delivery, sprint planning, and technical direction.",
+            "Drove 10% efficiency improvement across engineering through AI workflow adoption (Claude Code, AI agents).",
+            "Led complex ERP projects end-to-end, delivering ETL data migrations on time and within scope.",
+            "Mentored 2 engineers directly; one team member promoted within first 6 months under my guidance.",
+            "Bridging technical/non-technical worlds: empowering consultants to understand Odoo modules via AI tooling.",
+          ],
+        },
+        {
+          title: "Senior Software Engineer",
+          start: "Mar 2025",
+          end: "Aug 2025",
+          description: [
+            "Promoted for outstanding performance in complex ERP deliveries and process improvements.",
+            "Spearheaded AI adoption; led internal workshops (including for leadership) to integrate AI tooling into workflows.",
+          ],
+        },
+        {
+          title: "Software Engineer",
+          start: "Oct 2023",
+          end: "Mar 2025",
+          description: [
+            "Delivered and maintained high-impact Odoo ERP solutions; achieved highest billable rates in the company.",
+          ],
+        },
       ],
     },
     {
       company: "Manta, an IBM Company",
       link: "https://manta.io",
       badges: ["Remote"],
-      title: "Junior Software Engineer",
       location: "Lisbon, Portugal",
       logo: "",
-      start: "2022",
-      end: "2023",
-      description: [
-        "Developed complex SQL parsers (ANTLR) and entity resolution algorithms for core data lineage system.",
-        "Integrated advanced analytics features for predictive data movement insights.",
+      start: "Oct 2022",
+      end: "Sep 2023",
+      roles: [
+        {
+          title: "Junior Software Engineer",
+          start: "Oct 2022",
+          end: "Sep 2023",
+          description: [
+            "Developed complex SQL parsers (ANTLR) and entity resolution algorithms for core data lineage system.",
+            "Integrated advanced analytics features for predictive data movement insights.",
+          ],
+        },
       ],
     },
   ],
-  skills: [
-    "Java",
-    "Python",
-    "JavaScript",
-    "C++",
-    "C#",
-    "C",
-    "React",
-    "Next.js",
-    "TypeScript",
-    "Vue.js",
-    "Spring Boot",
-    "ANTLR",
-    "SQL",
-    "Odoo",
-    "Cursor IDE",
-    "Docker",
-    "Kubernetes",
-    "AWS",
-  ],
+  skills: {
+    languages: ["Java", "Python", "JavaScript", "TypeScript", "C++", "C#", "C"],
+    frameworks: ["Spring Boot", "React", "Next.js", "Vue.js", "Odoo", "REST APIs"],
+    data: ["PostgreSQL", "BigQuery", "Snowflake"],
+    infrastructure: ["Docker", "Kubernetes", "AWS"],
+    tools: ["Git", "Cursor IDE", "Claude Code", "ANTLR", "Cypress", "JMeter"],
+  },
   projects: [
     {
-      title: "Quizzes Tutor",
-      techStack: [
-        "Java",
-        "Spring Boot",
-        "Vue.js",
-        "TypeScript",
-        "Cypress",
-        "Apache JMeter",
-        "Spock Framework",
-      ],
+      title: "Ping-Pong Tracker",
+      techStack: ["Next.js", "Prisma", "TypeScript"],
       description:
-        "Full-stack educational app with Java Spring Boot back-end and Vue.js/TS front-end. E2E testing with Cypress, load testing with JMeter.",
+        "Match tracker & leaderboard system used internally at much. Consulting.",
+      logo: "",
+      link: {
+        label: "github.com",
+        href: "https://github.com/gustavoalmaguiar/much-ping-pong",
+      },
+    },
+    {
+      title: "Quizzes Tutor",
+      techStack: ["Java", "Spring Boot", "Vue.js", "Cypress"],
+      description:
+        "Full-stack educational platform with Java Spring Boot back-end and Vue.js front-end.",
       logo: "",
       link: {
         label: "github.com",
@@ -115,67 +134,11 @@ export const RESUME_DATA = {
     {
       title: "Class System",
       techStack: ["Java", "gRPC"],
-      description:
-        "Distributed class enrollment system built in Java with gRPC.",
+      description: "Distributed class enrollment system built in Java with gRPC.",
       logo: "",
       link: {
         label: "github.com",
         href: "https://github.com/gustavo-aguiar01/SD2122",
-      },
-    },
-    {
-      title: "Company Management",
-      techStack: ["Java"],
-      description:
-        "Java management app using design patterns.",
-      logo: "",
-      link: {
-        label: "github.com",
-        href: "https://github.com/gustavo-aguiar01/PO2021",
-      },
-    },
-    {
-      title: "Numbrix Solver",
-      techStack: ["Python"],
-      description:
-        "AI program built in Python used to solve Numbrix puzzles (DFS, BFS, Greedy Search & RBFS searching algorithms).",
-      logo: "",
-      link: {
-        label: "github.com",
-        href: "https://github.com/gustavo-aguiar01/IA2122",
-      },
-    },
-    {
-      title: "L22 Compiler",
-      techStack: ["C++"],
-      description:
-        "Compiler built in C++ for a simple programming language L22.",
-      logo: "",
-      link: {
-        label: "github.com",
-        href: "https://github.com/gustavo-aguiar01/Comp2122",
-      },
-    },
-    {
-      title: "User-Level FS",
-      techStack: ["C"],
-      description:
-        "File system at the user level built in C that uses primary memory to save its contents and handles multi-threaded usage.",
-      logo: "",
-      link: {
-        label: "github.com",
-        href: "https://github.com/gustavo-aguiar01/SO2021",
-      },
-    },
-    {
-      title: "Messaging Forum",
-      techStack: ["C"],
-      description:
-        "Client-Server architecture used for a centralized messaging service via TCP and UDP built in C.",
-      logo: "",
-      link: {
-        label: "github.com",
-        href: "https://github.com/gustavo-aguiar01/RC2122",
       },
     },
   ],
