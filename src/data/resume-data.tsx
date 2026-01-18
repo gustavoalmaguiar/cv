@@ -116,8 +116,8 @@ export const RESUME_DATA = {
         "Match tracker & leaderboard system used internally at much. Consulting.",
       logo: "",
       link: {
-        label: "github.com",
-        href: "https://github.com/gustavoalmaguiar/much-ping-pong",
+        label: "pingpong.gustavoaaguiar.com",
+        href: "https://pingpong.gustavoaaguiar.com",
       },
     },
     {
